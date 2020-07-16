@@ -55,7 +55,7 @@ const result = `
 		</tr>
 		<tr>
 			<td class="name">Знижка </td>
-			<td class="value">${randomDiscount} </td>
+			<td class="value">${randomDiscount} %</td>
 		</tr>
 		<tr>
 			<td class="name">Сума до оплати після знижки </td>
