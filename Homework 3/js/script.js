@@ -1,13 +1,13 @@
 //1
 function getMaxDigit(number) {
-    number = String(number).split("");
+    const innerNumber = String(number).split("");
     let maxDigit = 0;
-    for (let i = 0; i < number.length; i++) {
-        if (maxDigit < number[i]) {
-            maxDigit = number[i];
+    for (let i = 0; i < innerNumber.length; i++) {
+        if (maxDigit < innerNumber[i]) {
+            maxDigit = innerNumber[i];
         }
     }
-    return maxDigit;
+    return Number(maxDigit);
 }
 console.log(getMaxDigit(23456));
 
@@ -28,7 +28,7 @@ console.log(salaryAfterTax(1000));
 
 //5
 function getRandomNumber(n, m) {
-    const randomNumber = Math.round(Math.random() * (m - n)) + n;
+    const randomNumber = Math.round(Math.random() * (m - n + 1)) + n;
     return randomNumber;
 }
 console.log(getRandomNumber(1, 10));
