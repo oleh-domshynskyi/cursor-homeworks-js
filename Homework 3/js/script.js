@@ -28,7 +28,7 @@ console.log(salaryAfterTax(1000));
 
 //5
 function getRandomNumber(n, m) {
-    const randomNumber = Math.round(Math.random() * (m - n + 1)) + n;
+    const randomNumber = Math.floor(Math.random() * (m - n + 1)) + n;
     return randomNumber;
 }
 console.log(getRandomNumber(1, 10));
