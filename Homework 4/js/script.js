@@ -15,7 +15,7 @@ function getPairs() {
         }
     }
     for (let i = 0; i < 3; i++) {
-        pairs.push([`${boys[i]}, ${girls[i]}`]);
+        pairs.push([`${boys[i]}`, `${girls[i]}`]);
     }
 
     return pairs;
@@ -27,7 +27,7 @@ console.log(pairs);
 function pairsWithThemes(pairs, themes) {
     const pairsAndThemes = [];
     for (let i = 0; i < 3; i++) {
-      pairsAndThemes.push([`${pairs[i]}, ${themes[i]}`]);
+      pairsAndThemes.push([`${pairs[i]}`, `${themes[i]}`]);
     }
     return pairsAndThemes;
   }
@@ -38,7 +38,7 @@ function pairsWithThemes(pairs, themes) {
   function marksForStudents(students, marks) {
     const studentsMarks = [];
     for(let i =0; i < students.length; i++){
-      studentsMarks.push([`${students[i]}, ${marks[i]}`]);
+      studentsMarks.push([`${students[i]}`, `${marks[i]}`]);
     }
     return studentsMarks;
       
@@ -50,7 +50,7 @@ function pairsWithThemes(pairs, themes) {
   function randomMarkForProject(pairsAndThemes) {
       const studentsWithRandomMarks = [];
     for(let i =0; i < pairsAndThemes.length; i++){
-        studentsWithRandomMarks.push([`${pairsAndThemes[i]}, ${Math.ceil(Math.random()*5)}`]);
+        studentsWithRandomMarks.push([`${pairsAndThemes[i]}`, `${Math.ceil(Math.random()*5)}`]);
     }
     return studentsWithRandomMarks;
   }
