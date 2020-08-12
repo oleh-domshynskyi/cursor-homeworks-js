@@ -4,9 +4,9 @@ const marks = [4, 5, 5, 3, 4, 5];
 
 //1
 function getPairs() {
-    let boys = [];
-    let girls = [];
-    let pairs = [];
+    const boys = [];
+    const girls = [];
+    const pairs = [];
     for (let i = 0; i < students.length; i++) {
         if (students[i] === 'Олександр' || students[i] === 'Ігор' || students[i] === 'Олексій') {
             boys.push(students[i]);
@@ -15,7 +15,7 @@ function getPairs() {
         }
     }
     for (let i = 0; i < 3; i++) {
-        pairs.push([boys[i] + ", " + girls[i]]);
+        pairs.push([`${boys[i]}, ${girls[i]}`]);
     }
 
     return pairs;
@@ -25,9 +25,9 @@ console.log(pairs);
 
 //2
 function pairsWithThemes(pairs, themes) {
-    let pairsAndThemes = [];
+    const pairsAndThemes = [];
     for (let i = 0; i < 3; i++) {
-      pairsAndThemes.push([pairs[i] + `, ` + themes[i]]);
+      pairsAndThemes.push([`${pairs[i]}, ${themes[i]}`]);
     }
     return pairsAndThemes;
   }
@@ -36,9 +36,9 @@ function pairsWithThemes(pairs, themes) {
 
   //3
   function marksForStudents(students, marks) {
-    let studentsMarks = [];
+    const studentsMarks = [];
     for(let i =0; i < students.length; i++){
-      studentsMarks.push([students[i] + ', ' + marks[i]])
+      studentsMarks.push([`${students[i]}, ${marks[i]}`]);
     }
     return studentsMarks;
       
@@ -48,9 +48,9 @@ function pairsWithThemes(pairs, themes) {
 
   //4
   function randomMarkForProject(pairsAndThemes) {
-      let studentsWithRandomMarks = [];
+      const studentsWithRandomMarks = [];
     for(let i =0; i < pairsAndThemes.length; i++){
-        studentsWithRandomMarks.push([pairsAndThemes[i] + `, ` + Math.ceil(Math.random()*5)]);
+        studentsWithRandomMarks.push([`${pairsAndThemes[i]}, ${Math.ceil(Math.random()*5)}`]);
     }
     return studentsWithRandomMarks;
   }
