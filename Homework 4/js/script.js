@@ -15,7 +15,7 @@ function getPairs() {
         }
     }
     for (let i = 0; i < 3; i++) {
-        pairs.push([`${boys[i]}`, `${girls[i]}`]);
+      pairs.push([`${boys[i]}`, `${girls[i]}`]);
     }
 
     return pairs;
