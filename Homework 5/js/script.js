@@ -50,14 +50,6 @@ const countPositiveNumbers = (...numbers) => {
 console.log(`Number of positive numbers: ${countPositiveNumbers(-1,1,-2,2,-3,3)}`);
 
 //7
-const getDividedByFive = (...numbers) => {
-  let arrDividedByFive = [];
-  numbers.forEach((element) => {
-    if (element % 5 === 0 && element !== 0) {
-      arrDividedByFive.push(element);
-    }
-  });
-  return arrDividedByFive;
-};
-
+const getDividedByFive = (...numbers) => numbers.filter(item=>item%5===0);
 console.log(`Numbers divisible by 5: ${getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`);
+
