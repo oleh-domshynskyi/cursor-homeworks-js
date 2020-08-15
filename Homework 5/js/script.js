@@ -33,17 +33,8 @@ const getMedian = (...numbers) => {
 console.log(`Median: ${getMedian(1, 2, 3, 4, 5, 5.5, 6.6)}`);
 
 //5 
-const filterEvenNumbers = (...numbers) => {
-  let arrayWithoutEvenNumbers = [];
-  numbers.forEach((element) => {
-    if (Number.isInteger(element) && element % 2 !== 0) {
-      arrayWithoutEvenNumbers.push(element);
-    }
-  });
-  return arrayWithoutEvenNumbers;
-};
-
-console.log(`Not even numbers: ${filterEvenNumbers(1,2,3,4,5,6)}`);
+const filterEvenNumbers = (...numbers) => numbers.filter(item => item%2!==0);
+console.log(filterEvenNumbers(1,2,3,4,5,6));
 
 //6
 const countPositiveNumbers = (...numbers) => {
