@@ -27,11 +27,7 @@ console.log(`Average: ${getAverage(1,2,3,4,5,6,7,8,9)}`);
 //4 
 const getMedian = (...numbers) => {
   const arr = numbers.filter(item => Number.isInteger(item)).sort((a, b) => a - b);
-  if (arr.length % 2) {
-    return arr[(arr.length - 1) / 2];
-  } else {
-    return (arr[arr.length / 2] + arr[arr.length / 2 - 1]) / 2;
-  }
+ return arr.length%2?  arr[(arr.length - 1) / 2]: (arr[arr.length / 2] + arr[arr.length / 2 - 1]) / 2;
 };
 
 console.log(`Median: ${getMedian(1, 2, 3, 4, 5, 5.5, 6.6)}`);
