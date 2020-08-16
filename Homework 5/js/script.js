@@ -37,16 +37,7 @@ const filterEvenNumbers = (...numbers) => numbers.filter(item => item%2!==0);
 console.log(filterEvenNumbers(1,2,3,4,5,6));
 
 //6
-const countPositiveNumbers = (...numbers) => {
-  let counter = 0;
-  numbers.forEach((element) => {
-    if (element > 0) {
-      counter++;
-    }
-  });
-  return counter;
-};
-
+const countPositiveNumbers = (...numbers) => numbers.filter(item=>item>0).length;
 console.log(`Number of positive numbers: ${countPositiveNumbers(-1,1,-2,2,-3,3)}`);
 
 //7
