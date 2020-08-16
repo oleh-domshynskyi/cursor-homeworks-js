@@ -10,18 +10,7 @@ console.log(`Random array: ${getRandomArray(10, 2, 20)}`);
 
 
 //3
-const getAverage = (...numbers) => {
-  let arr = [];
-  let counter = 0;
-  numbers.forEach((element) => {
-    if (Number.isInteger(element)) {
-      arr.push(element);
-      counter += element;
-    }
-  });
-  return (counter / arr.length);
-};
-
+const getAverage = (...numbers) => numbers.reduce((a, b) => (a+b))/numbers.length;
 console.log(`Average: ${getAverage(1,2,3,4,5,6,7,8,9)}`);
 
 //4 
