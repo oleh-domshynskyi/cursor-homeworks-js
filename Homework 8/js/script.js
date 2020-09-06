@@ -1,6 +1,5 @@
 class Student {
     constructor(university, course, fullName) {
-        this.fullName = fullName;
         this.university = university;
         this.course = course;
         this.fullName = fullName;
