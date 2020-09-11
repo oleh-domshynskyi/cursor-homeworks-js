@@ -3,6 +3,7 @@ const firstButton = document.querySelector('.create-blocks-button');
 const secondButton = document.querySelector('.generate-color-button');
 const thirdButton = document.querySelector('.start-interval-button');
 const fourthButton = document.querySelector('.stop-interval-button');
+let boxCount =25;
 
 const generateRandomColor = () => {
     const r = Math.floor(Math.random() * (255 + 1));
@@ -13,7 +14,7 @@ const generateRandomColor = () => {
 }
 
 const generateBlocks = () => {
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < boxCount; i++) {
         let sqr = document.createElement("div");
         sqr.className = 'block';
         document.querySelector(".container").append(sqr);
