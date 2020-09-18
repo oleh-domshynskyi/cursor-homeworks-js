@@ -21,11 +21,11 @@ const getCharachters = () => {
                 return res.data.characters
             })
         .then((charactersLink) => {
-            let updatedCharactersUrls = [];
-            for (let i =0; i<charactersLink.lenght; i++) {
-                updatedCharactersUrls[i] = charactersUrls[i].replace('http:', 'https:');
+            let newCharactersLink = [];
+            for (let i = 0; i < charactersLink.length; i++) {
+                newCharactersLink[i] = charactersLink[i].replace('http:', 'https:');
             }
-            return Promise.all(charactersLink.map((element) => axios.get(element).then((res) => res.data)));
+            return Promise.all(newCharactersLink.map((element) => axios.get(element).then((res) => res.data)));
         })
 }
 
