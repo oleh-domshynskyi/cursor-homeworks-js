@@ -21,6 +21,8 @@ const getCharachters = () => {
                 return res.data.characters
             })
         .then((charactersLink) => {
+            charactersLink.forEach(element =>
+                element.replace('http:', 'https:'));
             return Promise.all(charactersLink.map((element) => axios.get(element).then((res) => res.data)));
         })
 }
