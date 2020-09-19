@@ -53,7 +53,7 @@ getCharacterInformationButton.addEventListener('click', () => {
 });
 
 
-const planets = (page) => {
+const getPlanets = (page) => {
     const parameter = {
         url: `${BASE}planets/`,
         params: {
@@ -68,9 +68,9 @@ const planets = (page) => {
     )
 }
 
-const displayPlanets = (planets) => {
+const displayPlanets = (getPlanets) => {
     container.innerHTML = '';
-    return planets.forEach(element => {
+    return getPlanets.forEach(element => {
         const planet = document.createElement('div');
         planet.className = 'planet';
         planet.innerHTML = `
@@ -82,11 +82,9 @@ const displayPlanets = (planets) => {
 }
 
 getPlanetInformationButton.addEventListener('click', () => {
-    planets().then(displayPlanets);
+    getPlanets().then(displayPlanets);
     nextButton.disabled = false;
-    prevButton.disabled = false;
     nextButton.style = "color:yellow; background:black";
-    prevButton.style = "color:yellow; background:black"
 });
 
 prevButton.addEventListener('click', () => {
@@ -97,7 +95,7 @@ prevButton.addEventListener('click', () => {
 
         nextButton.disabled = false;
         nextButton.style = "color:yellow; background:black"
-        planets(--page).then(displayPlanets);
+        getPlanets(--page).then(displayPlanets);
     }
 });
 
@@ -108,6 +106,6 @@ nextButton.addEventListener('click', () => {
     } else {
         prevButton.disabled = false;
         prevButton.style = "color:yellow; background:black"
-        planets(++page).then(displayPlanets);
+        getPlanets(++page).then(displayPlanets);
     }
 });
